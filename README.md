@@ -126,7 +126,7 @@ The maximum number of attempts to try connecting to the pipe, before giving up.
 ### `PipeConnectionOptions.mode`, default: `PipeMode::Byte`
 The type of pipe connection to make. By default, this uses `PIPE_READMODE_BYTE`.
 
-**Warning:** Using `PipeMode::Message` has not yet been extensively tested. If you plan on sending simple strings which are delimited by a character (like `node-ipc`` does), it is advised that you do not change this parameter.
+**Warning:** Using `PipeMode::Message` has not yet been extensively tested. If you plan on sending simple strings which are delimited by a character (like `node-ipc` does), it is advised that you do not change this parameter.
 
 ## License
 Distributed under the MIT License. See `LICENSE.txt` for more information.
