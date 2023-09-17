@@ -1,5 +1,23 @@
+<!-- Copied from: -->
+<!-- https://github.com/othneildrew/Best-README-Template/blob/master/BLANK_README.md -->
 
-# Win32 Simple Named Pipe Client
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+<br/>
+<div align="center">
+<h3 align="center">Win32 Simple Named-Pipe Client</h3>
+
+  <p align="center">
+    A simple to use, simple to implement named-pipe client, using the Win32 API.
+    <br />
+    <br />
+    <a href="https://github.com/blewert/win32-simple-named-pipe-client/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/blewert/win32-simple-named-pipe-client/issues">Request Feature</a>
+  </p>
+</div>
 
 ## Quickstart
 1. Download the latest release from the [Releases](https://github.com/blewert/win32-simple-named-pipe-client/releases) page, choosing the `NamedPipeClient.hpp` file.
@@ -16,7 +34,9 @@ Please note that the project is currently in pre-release, and as such, may not f
 | Version | Date | Notes |
 |---------|------|-------|
 | `v1.0.0-rc.1` | 17/09/23 | Initial pre-release, copied over from existing project |
-## Example code (sending data)
+
+## Example code
+### Sending data
 ```cpp
 //At the top of your source file
 using namespace win32Pipes;
@@ -39,7 +59,7 @@ client.Connect(L"tmp-app.world", connectOptions);
 client.Send("{ \"type\": \"message\", \"data\": \"hi\" }");
 ```
 
-## Example code (receiving data)
+### Receiving data
 ```cpp
 //At the top of your source file
 using namespace win32Pipes;
@@ -61,7 +81,7 @@ if(std::get<bool>(response))
     printf("Successfully read message: %s\n", std::get<std::string>().c_str());
 ```
 
-## Example code (sending/receiving)
+### Send/receive
 ```cpp
 //At the top of your source file
 using namespace win32Pipes;
@@ -109,5 +129,43 @@ The type of pipe connection to make. By default, this uses `PIPE_READMODE_BYTE`.
 
 **Warning:** Using `PipeMode::Message`` has not yet been extensively tested. If you plan on sending simple strings which are delimited by a character (like `node-ipc`` does), it is advised that you do not change this parameter.
 
-# License
-Distributed under the MIT License. See `LICENSE` for more information.
+## License
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+## Acknowledgements
+* [othneildrew](https://raw.githubusercontent.com/othneildrew) for their fantastic [README template](https://raw.githubusercontent.com/othneildrew/Best-README-Template/). This repository uses a modified version
+
+<!-- Copied from: -->
+<!-- https://github.com/othneildrew/Best-README-Template/blob/master/BLANK_README.md -->
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/blewert/win32-simple-named-pipe-client.svg?style=for-the-badge
+[contributors-url]: https://github.com/blewert/win32-simple-named-pipe-client/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/blewert/win32-simple-named-pipe-client.svg?style=for-the-badge
+[forks-url]: https://github.com/blewert/win32-simple-named-pipe-client/network/members
+[stars-shield]: https://img.shields.io/github/stars/blewert/win32-simple-named-pipe-client.svg?style=for-the-badge
+[stars-url]: https://github.com/blewert/win32-simple-named-pipe-client/stargazers
+[issues-shield]: https://img.shields.io/github/issues/blewert/win32-simple-named-pipe-client.svg?style=for-the-badge
+[issues-url]: https://github.com/blewert/win32-simple-named-pipe-client/issues
+[license-shield]: https://img.shields.io/github/license/blewert/win32-simple-named-pipe-client.svg?style=for-the-badge
+[license-url]: https://github.com/blewert/win32-simple-named-pipe-client/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/linkedin_username
+[product-screenshot]: images/screenshot.png
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
+[Vue-url]: https://vuejs.org/
+[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
+[Angular-url]: https://angular.io/
+[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
+[Svelte-url]: https://svelte.dev/
+[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
+[Laravel-url]: https://laravel.com
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[JQuery-url]: https://jquery.com 
